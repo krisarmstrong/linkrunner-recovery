@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkrunner-recovery"
+version = "1.0.0"
+description = "Recover and update MAC address, serial number, and option bits on NetAlly LinkRunner Pro/Duo devices"
+readme = "README.md"
+requires-python = ">=3.14"
+license = {text = "MIT"}
+authors = [
+    {name = "Kris Armstrong"}
+]
+keywords = ["netally", "linkrunner", "network", "recovery", "mac-address"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.14",
+]
+
+[project.urls]
+Homepage = "https://github.com/krisarmstrong/linkrunner-recovery"
+Repository = "https://github.com/krisarmstrong/linkrunner-recovery"
+
+[project.scripts]
+linkrunner-recovery = "linkrunner_recovery:main"
+
+[tool.setuptools]
+py-modules = ["linkrunner_recovery"]
+
+[tool.ruff]
+line-length = 100
